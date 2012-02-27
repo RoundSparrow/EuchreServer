@@ -1,13 +1,19 @@
 package com.cynical.android.euchre.server;
 
+import org.apache.log4j.Logger;
+
+import com.cynical.android.euchre.server.socket.network.ConnectionDaemon;
+
 public class Init {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-
 		
+		ConnectionDaemon daemon = new ConnectionDaemon();
+		Logger log = Logger.getLogger(Init.class);
+		daemon.start();
 
 	}
 
