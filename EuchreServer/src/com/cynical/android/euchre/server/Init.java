@@ -13,6 +13,7 @@ public class Init {
 		
 		ConnectionDaemon daemon = new ConnectionDaemon();
 		Logger log = Logger.getLogger(Init.class);
+		log.info("Starting connection daemon...");
 		daemon.start();
 
 	}
