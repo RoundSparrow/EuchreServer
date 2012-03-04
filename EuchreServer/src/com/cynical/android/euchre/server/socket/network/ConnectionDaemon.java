@@ -6,6 +6,8 @@ import java.net.Socket;
 
 import org.apache.log4j.Logger;
 
+import com.cynical.android.euchre.server.game.Context;
+
 public class ConnectionDaemon extends Thread {
 	
 	private static final int SOCKET_PORT = 12345;
@@ -13,6 +15,12 @@ public class ConnectionDaemon extends Thread {
 	Logger log = Logger.getLogger(ConnectionDaemon.class);
 	
 	ServerSocket sock;
+	
+	Context context;
+	
+	public ConnectionDaemon(Context context) {
+		this.context = context;
+	}
 	
 	public void run() {
 		try {
@@ -29,6 +37,7 @@ public class ConnectionDaemon extends Thread {
 			try {
 				Socket s = sock.accept();
 				ConnectedUser user = new ConnectedUser(s);
+				context.getLobby().addUser(user);
 			} catch (IOException e) {
 				log.error("Error when waiting for connection...", e);
 			}

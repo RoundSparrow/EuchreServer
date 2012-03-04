@@ -25,6 +25,10 @@ public class EuchreSocketAdapter {
 		this.gson = new Gson();
 	}
 	
+	public boolean isConnected() {
+		return sock.isConnected();
+	}
+	
 	/**
 	 * Closes the socket connection
 	 * @throws IOException If an I/O error occurs when closing the socket
