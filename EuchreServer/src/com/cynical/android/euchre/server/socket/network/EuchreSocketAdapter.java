@@ -29,6 +29,10 @@ public class EuchreSocketAdapter {
 		return sock.isConnected();
 	}
 	
+	public String getIpAddress() {
+		return sock.getInetAddress().getHostAddress();
+	}
+	
 	/**
 	 * Closes the socket connection
 	 * @throws IOException If an I/O error occurs when closing the socket

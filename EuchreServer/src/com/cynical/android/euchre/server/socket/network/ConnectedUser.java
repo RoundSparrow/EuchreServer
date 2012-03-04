@@ -23,5 +23,9 @@ public class ConnectedUser {
 			return false;
 		}
 	}
+	
+	public String getUserIpAddress() {
+		return sockAdapter.getIpAddress();
+	}
 
 }
