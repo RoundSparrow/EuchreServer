@@ -1,4 +1,4 @@
-package com.cynical.android.euchre.server.netty.handler;
+package com.cynical.euchre.server.netty.handler;
 
 import org.jboss.netty.channel.ChannelHandlerContext;
 import org.jboss.netty.channel.ChannelStateEvent;

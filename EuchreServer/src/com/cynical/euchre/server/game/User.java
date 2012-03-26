@@ -1,4 +1,4 @@
-package com.cynical.android.euchre.server.game;
+package com.cynical.euchre.server.game;
 
 import org.jboss.netty.channel.Channel;
 

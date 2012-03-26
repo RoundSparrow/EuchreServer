@@ -1,4 +1,4 @@
-package com.cynical.android.euchre.server;
+package com.cynical.euchre.server;
 
 import java.net.InetSocketAddress;
 import java.util.concurrent.Executors;
@@ -11,9 +11,9 @@ import org.jboss.netty.channel.ChannelPipelineFactory;
 import org.jboss.netty.channel.Channels;
 import org.jboss.netty.channel.socket.nio.NioServerSocketChannelFactory;
 
-import com.cynical.android.euchre.server.netty.handler.ServerHandler;
 import com.cynical.euchre.netty.decoders.EuchreCommandDecoder;
 import com.cynical.euchre.netty.encoders.EuchreCommandEncoder;
+import com.cynical.euchre.server.netty.handler.ServerHandler;
 
 public class Init {
 
