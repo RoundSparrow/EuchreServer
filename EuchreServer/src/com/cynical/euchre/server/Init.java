@@ -34,7 +34,7 @@ public class Init {
 		ServerBootstrap bootstrap = new ServerBootstrap(factory);
 		
 		bootstrap.setPipelineFactory(new ChannelPipelineFactory() {			
-			@Override
+			
 			public ChannelPipeline getPipeline() throws Exception {		
 				
 				ChannelPipeline pipeline = Channels.pipeline();
